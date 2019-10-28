@@ -14,6 +14,7 @@ public class SessionDemo extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("此处进行了代码修改");
+		System.out.println("此处进行了代码修改第二次");
 		response.setContentType("text/html; charset=UTF-8");
 		HttpSession session = request.getSession();
 		session.setAttribute("name", "zhangsan");
