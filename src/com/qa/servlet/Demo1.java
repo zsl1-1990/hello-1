@@ -11,7 +11,7 @@ public class Demo1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Cookie[] cookies = request.getCookies();
-		
+	system.out.println("这是我的修改");
 		for (Cookie cookie3 : cookies) {
 			System.out.println(cookie3.getName()+":"+cookie3.getValue());
 		}
