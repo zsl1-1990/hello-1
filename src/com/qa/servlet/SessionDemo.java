@@ -13,13 +13,14 @@ public class SessionDemo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("´Ë´¦½øĞĞÁË´úÂëĞŞ¸Ä");
-		response.setContentType("text/html; charset=UTF-8");
+
+		response.setContenType("text/html; charset=UTF-8");
 		HttpSession session = request.getSession();
+		
 		session.setAttribute("name", "zhangsan");
 		session.setAttribute("product", "CowCar");
 		PrintWriter w = response.getWriter();
-		w.write("<marquee>»¶Ó­"+session.getAttribute("name")+"¹âÁÙ±¾Õ¾"+"</marquee>");
+		w.write("<marquee>å¨†ãˆ£ç¹‹"+session.getAttribute("name")+"éå¤‰å¤éˆî„‚ç¯"+"</marquee>");
 		w.write("<h1>"+session.getAttribute("name")+","+session.getAttribute("product")+"</h1>");
 	}
 
